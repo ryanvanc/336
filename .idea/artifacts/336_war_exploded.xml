@@ -9,10 +9,12 @@
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="gson-2.8.5" />
+          <element id="file-copy" path="$USER_HOME$/Java Libraries/gson-2.8.5.jar" />
         </element>
       </element>
       <element id="directory" name="Resources" />
       <element id="file-copy" path="$PROJECT_DIR$/web/cards.json" />
+      <element id="library" level="project" name="gson-2.8.5" />
     </root>
   </artifact>
 </component>
