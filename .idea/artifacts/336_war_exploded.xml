@@ -8,7 +8,6 @@
           <element id="module-output" name="336" />
         </element>
         <element id="directory" name="lib">
-          <element id="library" level="project" name="gson-2.8.5" />
           <element id="file-copy" path="$USER_HOME$/Java Libraries/gson-2.8.5.jar" />
         </element>
       </element>
