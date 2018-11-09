@@ -22,7 +22,7 @@ public class libraryCards {
     @Context
     private UriInfo context;
 
-    @GET
+    /*@GET
     @Produces(MediaType.APPLICATION_JSON)
     public String getLibraryCard(@PathParam("cnum") int cardNum, @PathParam("name") String lastName) throws IOException, FileNotFoundException{
 
@@ -43,7 +43,16 @@ public class libraryCards {
 
         return "";
     }
+*/
 
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    public String getLibraryCard(@PathParam("cnum") int cnum){
+        
+
+
+        return "";
+    }
 
     public static void main(String[] args) throws IOException {
 
