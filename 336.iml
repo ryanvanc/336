@@ -21,7 +21,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="PROVIDED" name="GlassFish 4.1.1" level="application_server_libraries" />
     <orderEntry type="library" scope="PROVIDED" name="GlassFish 4.1.1 - RESTful Web Service" level="application_server_libraries" />
-    <orderEntry type="library" name="gson-2.8.5" level="project" />
     <orderEntry type="module-library">
       <library>
         <CLASSES>
@@ -31,5 +30,6 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="gson-2.8.5 (2)" level="project" />
   </component>
 </module>
