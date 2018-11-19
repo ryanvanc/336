@@ -18,6 +18,7 @@ public class libraryCard implements Serializable {
     private String txtphone="";
     private String txtcell="";
     private String chkopt="";
+    private String drpbirthmon="";
     private String drpbirthday="";
     private String drpbirthyear="";
     private String txtcap="";

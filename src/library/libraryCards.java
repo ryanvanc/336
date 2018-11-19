@@ -16,7 +16,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.UriInfo;
 
 // The Java class will be hosted at the URI path "/helloworld"
-@Path("/libraryCards/{cnum}/{name}")
+@Path("/libraryCards/{cnum}")
 public class libraryCards {
 
     @Context
@@ -48,7 +48,25 @@ public class libraryCards {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public String getLibraryCard(@PathParam("cnum") int cnum){
-        
+        String jsonFilePath = "cards.json";
+        libraryCard[] array;
+        try(FileReader reader = new FileReader(jsonFilePath))
+        {
+            Gson gson = new GsonBuilder().setPrettyPrinting().create();
+            array = gson.fromJson(reader, libraryCard[].class);
+            for(libraryCard c : array)
+            {
+                if(c.getCnum() == cnum)
+                {
+
+                    return gson.toJson(c);
+                }
+            }
+
+        }catch(Exception ex){
+            ex.printStackTrace();
+            return "";
+        }
 
 
         return "";

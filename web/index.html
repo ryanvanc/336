@@ -59,14 +59,31 @@
     </script>
         <script>
             $(document).ready(function() {
-                $("#submits").click(function(event) {
+                $("#cnum").blur(function(event) {
                     event.preventDefault();
                     $.getJSON("http://localhost:8080/336_war_exploded/webresources/libraryCards/"
-                        + $("#cnum").val() + "/"
-                        + $("#txtlast").val(),
+                        + $("#cnum").val(),
                         function (data, status, jqXHR) {
-                            var x = window.open()
-                            x.document.write("<html><p>"+ jqXHR.responseText+"</p></html>");
+                            var jsonString = jqXHR.responseText;
+                            var jsonObject = JSON.parse(jsonString);
+                            var type;
+                            for(var property in jsonObject){
+                                if(property.startsWith("drp"))
+                                {
+                                    type = "select";
+                                }
+                                else if(property.startsWith("rdo"))
+                                {
+                                    type = "";
+                                }
+                                else { type = "input"; }
+                                var selector = type+"[name="+property+"]";
+
+                                $(selector).val(jsonObject[property]);
+                                console.log(selector);
+
+                            }
+
                         }
                     );
 
